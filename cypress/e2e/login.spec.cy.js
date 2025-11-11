@@ -1,0 +1,17 @@
+describe('Orange HRM Test spec', () => {
+  it('Login - Success', () => {
+    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.get('[name="username"]').type('Admin')
+    cy.get('[name="password"]').type('admin123')
+    cy.contains('button',' Login ').click()
+    cy.location('pathname',{timeout:10000}).should('equal','/web/index.php/dashboard/index')
+    cy.contains('span', 'Admin', {timeout: 10000}).click()
+    cy.get('[data-v-957b4417] .oxd-input' ).type('JoãoQA')
+    cy.get('input[placeholder="Type for hints..."]', { timeout: 10000 }).type('freire')
+    cy.get('.oxd-select-wrapper').eq(0).click()
+    cy.contains('.oxd-select-dropdown' , 'Admin').click()
+    cy.get('.oxd-select-wrapper').eq(1).click()
+    cy.contains('.oxd-select-dropdown', 'Enable').click()
+    cy.contains('button' , 'Reset').click()
+  })
+})
