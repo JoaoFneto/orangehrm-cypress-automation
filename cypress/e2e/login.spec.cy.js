@@ -6,9 +6,6 @@ describe('Orange HRM Test spec', () => {
         checkStatusList: ".oxd-select-wrapper",
         selectRoleList: ".oxd-select-dropdown",
         selectStatusList: ".oxd-select-dropdown"
-
-
-
       }
 
 
@@ -25,6 +22,6 @@ describe('Orange HRM Test spec', () => {
     cy.contains(selectorList.selectRoleList, 'Admin').click()
     cy.get(selectorList.checkStatusList).eq(1).click()
     cy.contains(selectorList.selectStatusList, 'Enable').click()
-    cy.contains('button' , 'Reset').click()
+    cy.contains('button', 'Reset').click()
   })
 })
