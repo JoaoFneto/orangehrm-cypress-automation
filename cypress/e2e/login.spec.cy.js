@@ -6,7 +6,8 @@ describe('Orange HRM Test spec', () => {
     checkStatusList: ".oxd-select-wrapper",
     selectRoleList: ".oxd-select-dropdown",
     selectStatusList: ".oxd-select-dropdown",
-    dashbordGrid: ".orangehrm-dashboard-grid"
+    dashbordGrid: ".orangehrm-dashboard-grid",
+    buttonMyinfo:'[href="/web/index.php/pim/viewMyDetails"]'
   }
 
 
@@ -25,5 +26,6 @@ describe('Orange HRM Test spec', () => {
     cy.get(selectorList.checkStatusList).eq(1).click()
     cy.contains(selectorList.selectStatusList, 'Enable').click()
     cy.contains('button', 'Reset').click()
+    cy.get(selectorList.buttonMyinfo).click()
   })
 })
