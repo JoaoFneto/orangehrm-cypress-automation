@@ -42,7 +42,6 @@ describe('Orange HRM Test spec', () => {
     cy.get(selectorList.myinfoDriveId).eq(5).clear().type('856431')
     cy.get('[data-v-4a95a2e0] ,.oxd-date-wrapper').eq(0).click()
     cy.contains('[data-v-4a95a2e0] ,.oxd-date-wrapper', 'Clear').click()
-       .type('2025-12-12')
-
+    
   })
 })
